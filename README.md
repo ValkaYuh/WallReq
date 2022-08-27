@@ -20,7 +20,7 @@ The "wr!help" command will help you get started with all the commands. They are 
 # Installation
 - [Python 3.9+](https://www.python.org/downloads/)
 - Install required packages (discord, requests)
-> pip install discord.py
+> pip install discord.py\
 > pip install requests
 - Create the Discord bot through the [Discord Portal](https://discord.com/developers/applications), you can use [this](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) guide.
   The guide explains everything from creating the bot, to inviting it to your server.
