@@ -13,7 +13,7 @@ The "wr!help" command will help you get started with all the commands. They are 
 > wr!tp for the top image of the month in the people category\
 > wr!rn for a random nsfw image\
 > wr!tn for the top nsfw image of the month\
-> wr!s to search for anything, e.g. "wr!s cars"\
+> wr!s to search for anything, e.g. "wr!s cars"
 
 # Installation
 - [Python 3.9+](https://www.python.org/downloads/)
