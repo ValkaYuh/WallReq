@@ -82,8 +82,8 @@ async def on_message(message):
         msg = 'https://wallhaven.cc/w/' + wid
         await message.channel.send(f'{msg}')  # send msg with the link of the wallpaper
         return
-    substring = 'wr!s'
     # ------------------------------ SEARCH -----------------------------------------------------------
+    substring = 'wr!s'
     if substring in msg:  # SEARCH FUNCTION
         search = user_message[5:]  # Isolate search keywords from wr!s command
 
@@ -95,7 +95,6 @@ async def on_message(message):
         wid = str(api.content).split(':')[2]
         wid = wid.split(',')[0]  # cut everything out except the id
         wid = wid.replace('"', '')
-        print(wid)
 
         msg = 'https://wallhaven.cc/w/' + wid
 
