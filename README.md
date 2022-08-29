@@ -15,15 +15,17 @@ The "wr!help" command will help you get started with all the commands. They are 
 > wr!tn for the top nsfw image of the month\
 > wr!s to search for anything, e.g. "wr!s cars"
 
+**Note: only the last 3 commands can spit out NSFW images, everything else is SFW**
+
 # Installation
 - [Python 3.9+](https://www.python.org/downloads/)
 - Install required packages (discord, requests)
-> pip install discord.py
+> pip install discord.py\
 > pip install requests
 - Create the Discord bot through the [Discord Portal](https://discord.com/developers/applications), you can use [this](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) guide.
   The guide explains everything from creating the bot, to inviting it to your server.
 > If you read the guide you will know that you need a permission integer, it is "68608".
 - Now you can put your bot's token in the WallReq.py script.
 - Next if you want the NSFW features to work you will need to create a [Wallhaven](https://wallhaven.cc/join) account and put your [APIkey](https://wallhaven.cc/settings/account) in the script.
-> If you don't put in an APIkey the bot will still work normally, it will just be family friendly.
+> If you don't put in an APIkey the bot will still work normally, it will just be family friendly (wr!rn and wr!tn commands won't work, search functionality will still work, just won't show NSFW results).
 - Now you can simply run the script
