@@ -72,12 +72,11 @@ async def on_message(message):
     if msg == 'wr!r' or msg == 'wr!rg' or msg == 'wr!ra' or msg == 'wr!rp' or msg == 'wr!t' or msg == 'wr!tg' or\
             msg == 'wr!ta' or msg == 'wr!tp' or msg == 'wr!rn' or msg == 'wr!tn':
         api = requests.get(f"{uselink}")  # get data from wallhaven
+        response = api.json()
         if api.status_code != 200:
             await message.channel.send('Request failed with code:' f'{api.status_code}')  # Check if the request is ok
 
-        wid = str(api.content).split(':')[2]
-        wid = wid.split(',')[0]  # cut everything out except the id
-        wid = wid.replace('"', '')
+        wid = response['data'][0]['id']  # get the id of the wallpaper from the json file
 
         msg = 'https://wallhaven.cc/w/' + wid
         await message.channel.send(f'{msg}')  # send msg with the link of the wallpaper
@@ -89,12 +88,11 @@ async def on_message(message):
 
         uselink = baselink + 'search?apikey=' + ApiKey + '&sorting=random&purity=111&q=' + search
         api = requests.get(f"{uselink}")  # get data from wallhaven
+        response = api.json()
         if api.status_code != 200:
             await message.channel.send('Request failed with code:' f'{api.status_code}')  # Check if the request is ok
 
-        wid = str(api.content).split(':')[2]
-        wid = wid.split(',')[0]  # cut everything out except the id
-        wid = wid.replace('"', '')
+        wid = response['data'][0]['id']  # get the id of the wallpaper from the json file
 
         msg = 'https://wallhaven.cc/w/' + wid
 
