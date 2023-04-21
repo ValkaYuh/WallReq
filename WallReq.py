@@ -48,6 +48,7 @@ def top(category):
     response = api.json()
     if api.status_code != 200:
         msg = 'Request failed with code:' f'{api.status_code}'  # Check if the request is ok
+        return msg
 
     msg = response['data'][0]['path']  # get the id of the wallpaper from the json file
     return msg
@@ -74,6 +75,7 @@ def random(category):
     response = api.json()
     if api.status_code != 200:
         msg = 'Request failed with code:' f'{api.status_code}'  # Check if the request is ok
+        return msg
 
     msg = response['data'][0]['path']  # get the id of the wallpaper from the json file
     return msg
@@ -86,6 +88,11 @@ def search(query):
     response = api.json()
     if api.status_code != 200:
         msg = 'Request failed with code:' f'{api.status_code}'  # Check if the request is ok
+        return msg
+
+    if response['meta']['total'] == 0:
+        msg = "There's no images matching that query!"  # Check if the request is ok
+        return msg
 
     msg = response['data'][0]['path']
     return msg
