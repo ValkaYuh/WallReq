@@ -1,21 +1,9 @@
 # Overview
 WallReq is a simple discord bot that sends whatever wallpapers you want it to, powered by Wallhaven's API. You can request random or the top wallpapers from various
 categories (people, general, anime and NSFW). You can also search for any wallpaper.
-The "wr!help" command will help you get started with all the commands. They are also listed bellow:
+The "wr!help" or "/help" commands will help you get started with all the commands (the bot works both with the old command method and the new slash commands).
 
-> wr!r for a random image\
-> wr!rg for a random image in the general category\
-> wr!ra for a random image in the anime category\
-> wr!rp for a random image in the people category\
-> wr!t for the top image of the month\
-> wr!tg for the top image of the month in the general category\
-> wr!ta for the top image of the month in the anime category\
-> wr!tp for the top image of the month in the people category\
-> wr!rn for a random nsfw image\
-> wr!tn for the top nsfw image of the month\
-> wr!s to search for anything, e.g. "wr!s cars"
-
-**Note: only the last 3 commands can spit out NSFW images, everything else is SFW**
+**Note: you can get NSFW images ONLY if you put a WallHaven API key in the script, otherwise the bot remains family friendly!**
 
 # Installation
 - [Python 3.9+](https://www.python.org/downloads/)
